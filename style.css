@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Cabin', sans-serif;
+}
+
+
+.main{
+    background: url(./HD-hotspot-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+
+.main__content{
+    padding: 5px 60px;
+    background: transparent;
+    box-shadow: 0 0 20px rgb(29 23 77 / 10%);
+    position: relative;
+    z-index: 1;
+}
+
+.main__container{
+    padding: 50px 0;
+    max-width: 800px;
+    margin: auto;
+}
+
+li{
+    list-style: none;
+}
+
+.main__header {
+    padding-top: 30px;
+}
+
+.main__header h4 {
+    font-size: 30px;
+    color: #df6784;
+    font-weight: 700;
+}
+
+.head {
+    margin-top: 30px;
+}
+.head input{
+    padding: 11px 15px 11px 20px;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid #df6784;
+}
+
+.btn:hover{
+    color: #fff;
+}
+.body button{
+    background-color: #df6784;
+    color: #fff;
+    font-weight: 400;
+    padding: 8px 30px;
+    margin: 20px 0;
+}
+.footer{
+    background-color: #c7f7ff;
+    text-align: left;
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: relative;
+    font-size: 20px;
+    color: #df6784;
+    box-shadow: 0 0px 10px rgb(29 23 77 / 10%);
+    display: flex;
+    align-items: center;
+}
+.footer i{
+    font-size: 30px;
+    color: #df6784;
+    font-weight: 700;
+    padding: 0 5px 0 0 ;
+}
+#manager {
+    width: 100%;
+    margin: 30px auto;
+}
+#manager li {
+    margin-bottom: 5px;
+    border-left: 3px solid #df6784;
+}
+#manager li label{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    color: #df6784;
+    margin: 0;
+    background-color: white;
+    border: 1px solid rgba(0,0,0,.125);
+    transition: all .5s;
+    border-left: none;
+}
+
+#manager li label.background{
+    background: #c7f7ff;
+    border-bottom: none;
+}
+
+#manager li label h4{
+    font-size: 20px;
+    padding: 0 10px;
+    margin: 0;
+}
+
+#manager li label h4 i {
+    padding-right: 10px;
+}
+
+#manager li label .fa-chevron-down{
+    padding: 0 10px;
+    transform: rotate(0);
+    transition: all .5s;
+}
+
+#manager li label.rotate .fa-chevron-down{
+    transform: rotate(-180deg);
+}
+
+
+
+#manager label + input[type='checkbox']{
+    display: none;
+}
+
+#manager .content{
+    max-height: 0px;
+    transition: all .5s;
+    overflow: hidden;
+    background-color: #fff;
+    
+}
+
+
+#manager label + input[type='checkbox']:checked + .content{
+    max-height: 450px;
+    padding: 20px;
+    border: 1px solid rgba(0,0,0,.125);
+}
+
+#manager label + input[type='checkbox']:checked + .content h4{
+    transform: translate(0);
+}
+
+#manager .content h4{
+    padding-top: 20px;
+    font-weight: 700;
+    color: #df6784;
+}
+#manager .content h4 i {
+    margin-right: 5px;
+    color: #cc788b;
+}
+
+#manager .icon{
+    padding: 0;
+}
+
+
+
+

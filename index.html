@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập JS Buổi 7</title>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <section class="main">
+        <div class="main__container">
+            <div class="main__content">
+                <div class="main__header">
+                    <h4>
+                        <i class="fa-solid fa-user"></i>
+                        Nhập vào số nguyên</h4>
+                    <div class="head">
+                        <input id="numN" type="number" placeholder="Nhập số n">
+                    </div>
+                    <div class="body">
+                        <button id="addNum" class="btn" >Thêm số</button>
+                    </div>
+                    <div class="footer">
+                        <i class="fa-sharp fa-solid fa-right-long"></i>
+                        <span id="showN"></span>
+                    </div>
+                </div>
+
+                <div class="main__body">
+                    <ul id="manager">
+                        <li>
+                            <label for="bai1" class="toggle">
+                                <h4>
+                                    <i class="fa-solid fa-1"></i>
+                                    Tổng số dương
+                                </h4>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </label>
+                            <input type="checkbox" id="bai1">
+                            <div class="content">
+                                <h4>
+                                    <i class="fa-solid fa-plus"></i>
+                                    Tổng các số dương</h4>
+                                <div class="body">
+                                    <button id="tinhTong" class="btn">Tính tổng</button>
+                                </div>
+                                <div class="footer">
+                                    <i class="fa-sharp fa-solid fa-right-long"></i>
+                                    <span id="showTong"></span>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <label for="bai2" class="toggle">
+                                <h4>
+                                    <i class="fa-solid fa-2"></i>
+                                    Đếm số dương
+                                </h4>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </label>
+                            <input type="checkbox" id="bai2" >
+                            <div class="content">
+                                <h4>
+                                    <i class="fa-solid fa-list-ol"></i>
+                                    Đếm số dương</h4>
+                                <div class="body">
+                                    <button id="demSoDuong" class="btn">Đếm số</button>
+                                </div>
+                                <div class="footer">
+                                    <i class="fa-sharp fa-solid fa-right-long"></i>
+                                    <span id="showDemSoDuong"></span>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <label for="bai3" class="toggle">
+                                <h4>
+                                    <i class="fa-solid fa-3"></i>
+                                    Tìm số nhỏ nhất
+                                </h4>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </label>
+                            <input type="checkbox" id="bai3" >
+                            <div class="content">
+                                <h4>
+                                    <i class="fa-solid fa-magnifying-glass-minus"></i>
+                                    Tìm số nhỏ nhất</h4>
+                                <div class="body">
+                                    <button id="btnTimSo" class="btn">Tìm số</button>
+                                </div>
+                                <div class="footer">
+                                    <i class="fa-sharp fa-solid fa-right-long"></i>
+                                    <span id="showTimSo"></span>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <label for="bai4" class="toggle">
+                                <h4>
+                                    <i class="fa-solid fa-4"></i>
+                                    Tìm số dương nhỏ nhất
+                                </h4>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </label>
+                            <input type="checkbox" id="bai4" >
+                            <div class="content">
+                                <h4>
+                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                    Tìm số dương nhỏ nhất</h4>
+                                <div class="body">
+                                    <button id="minNum" class="btn">Tìm số dương nhỏ nhất</button>
+                                </div>
+                                <div class="footer">
+                                    <i class="fa-sharp fa-solid fa-right-long"></i>
+                                    <span id="showMinNum"></span>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <label for="bai5" class="toggle">
+                                <h4>
+                                    <i class="fa-solid fa-5"></i>
+                                    Tìm số chẵn cuối cùng
+                                </h4>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </label>
+                            <input type="checkbox" id="bai5" >
+                            <div class="content">
+                                <h4>
+                                    <i class="fa-solid fa-calendar-plus"></i>
+                                    Tìm số chẵn cuối cùng</h4>
+                                <div class="body">
+                                    <button id="lastEvenNum" class="btn">Tìm số chẵn cuối cùng</button>
+                                </div>
+                                <div class="footer">
+                                    <i class="fa-sharp fa-solid fa-right-long"></i>
+                                    <span id="showEvenNum"></span>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <label for="bai6" class="toggle">
+                                <h4>
+                                    <i class="fa-solid fa-6"></i>
+                                    Đổi chỗ
+                                </h4>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </label>
+                            <input type="checkbox" id="bai6" >
+                            <div class="content">
+                                <h4>
+                                    <i class="fa-solid fa-rotate"></i>
+                                    Đổi chỗ</h4>
+                                <div class="head">
+                                    <input id="index1" type="number" placeholder="Nhập số vị trí 1">
+                                    <input id="index2" type="number" placeholder="Nhập số vị trí 2">
+                                </div>
+                                <div class="body">
+                                    <button id="btnConvert" class="btn">Đổi chỗ</button>
+                                </div>
+                                <div class="footer">
+                                    <i class="fa-sharp fa-solid fa-right-long"></i>
+                                    <span id="showConvert"></span>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <label for="bai7" class="toggle">
+                                <h4>
+                                    <i class="fa-solid fa-7"></i>
+                                    Sắp xếp tăng dần
+                                </h4>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </label>
+                            <input type="checkbox" id="bai7" >
+                            <div class="content">
+                                <h4>
+                                    <i class="fa-solid fa-arrow-up-9-1"></i>
+                                    Sắp xếp tăng dần</h4>
+                                <div class="body">
+                                    <button id="btnSapXep" class="btn">Sắp xếp</button>
+                                </div>
+                                <div class="footer">
+                                    <i class="fa-sharp fa-solid fa-right-long"></i>
+                                    <span id="showSapXep"></span>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <label for="bai8" class="toggle">
+                                <h4>
+                                    <i class="fa-solid fa-8"></i>
+                                    Tìm số nguyên tố đầu tiên
+                                </h4>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </label>
+                            <input type="checkbox" id="bai8" >
+                            <div class="content">
+                                <h4>
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    Tìm số nguyên tố đầu tiên</h4>
+                                <div class="body">
+                                    <button id="btnPrime" class="btn">Tìm số nguyên tố</button>
+                                </div>
+                                <div class="footer">
+                                    <i class="fa-sharp fa-solid fa-right-long"></i>
+                                    <span id="showPrime"></span>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <label for="bai9" class="toggle">
+                                <h4>
+                                    <i class="fa-solid fa-9"></i>
+                                    Đếm số nguyên
+                                </h4>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </label>
+                            <input type="checkbox" id="bai9" >
+                            <div class="content">
+                                <h4>
+                                    <i class="fa-solid fa-plus-minus"></i>
+                                    Đếm số nguyên</h4>
+                                <div class="head">
+                                    <input id="numInteger" type="number" placeholder="Nhập số">
+                                    <div class="body">
+                                        <button id="btnAddNum" class="btn">Thêm số</button>
+                                    </div>
+                                    <div class="footer">
+                                        <i class="fa-sharp fa-solid fa-right-long"></i>
+                                        <span id="showAddNum"></span>
+                                    </div>
+                                </div>
+                                <div class="body">
+                                    <button id="btnInteger" class="btn">Đếm số nguyên</button>
+                                </div>
+                                <div class="footer">
+                                    <i class="fa-sharp fa-solid fa-right-long"></i>
+                                    <span id="showInteger"></span>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <label for="bai10" class="toggle">
+                                <h4>
+                                    <i class="fa-solid fa-1 icon"></i>
+                                    <i class="fa-solid fa-0 icon2"></i>
+                                    So sánh số âm và số dương
+                                </h4>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </label>
+                            <input type="checkbox" id="bai10" >
+                            <div class="content">
+                                <h4>
+                                    <i class="fa-solid fa-code"></i>
+                                    So sánh số âm và số dương</h4>
+                                <div class="body">
+                                    <button id="btnSoSanh" class="btn">So sánh</button>
+                                </div>
+                                <div class="footer">
+                                    <i class="fa-sharp fa-solid fa-right-long"></i>
+                                    <span id="showSoSanh"></span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+    <script src="./toggleClass.js"></script>
+</body>
+</html>
